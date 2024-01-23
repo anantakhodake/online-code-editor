@@ -8,13 +8,6 @@ import "./CssEditor.css"
 
 
 function CssEditor() {
-  const [code, setCode] = useState("");
-  useEffect(() => {
-    Prism.highlightAll();
-  }, [code]);
-  const handleChange = (event) => {
-    setCode(event.target.value);
-  };
   return (
     <div className="css-container">
       <label className="css-label">
@@ -22,10 +15,7 @@ function CssEditor() {
         Css
       </label>
       <textarea
-        value={code}
-        onChange={handleChange}
         className="css-code"
-        spellCheck="true"
       ></textarea>
     </div>
   );

@@ -11,13 +11,12 @@ function App() {
   return (
     <>
       <div className="left">
-        <div className="left-v">
         <HtmlEditor />
         <CssEditor/>
         <JsEditor/>
         </div>
-      </div>
       <div className="right">
+        <Editor />
       </div>
     </>
   );
