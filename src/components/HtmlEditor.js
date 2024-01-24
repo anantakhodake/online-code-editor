@@ -1,12 +1,10 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHtml5 } from "@fortawesome/free-brands-svg-icons";
-import { useState, useEffect } from "react";
-import Prism from "prismjs";
-import "prismjs/themes/prism.css";
+import { useState } from "react";
 import "./HtmlEditor.css";
 
-function HtmlEditor() {
+function HtmlEditor({ code, onChange }) {
   return (
     <div>
       <div className="html-container">
@@ -14,10 +12,7 @@ function HtmlEditor() {
           <FontAwesomeIcon className="html-icon" icon={faHtml5} />
           HTML
         </label>
-        <textarea
-          spellCheck="true"
-          className="html-code"
-        ></textarea>
+        <textarea spellCheck="true" className="html-code"></textarea>
       </div>
     </div>
   );

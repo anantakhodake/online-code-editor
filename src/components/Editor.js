@@ -12,7 +12,6 @@ function Editor() {
         </label>
         <Iframe
           className="iframe"
-          src={code}
           title="Online Code Editor"
           sandbox="allow-scripts"
           frameBorder="0"
