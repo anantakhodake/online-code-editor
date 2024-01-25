@@ -2,7 +2,6 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHtml5 } from "@fortawesome/free-brands-svg-icons";
 import { useState, useEffect } from "react";
-import { Controlled as CodeMirror } from 'react-codemirror2';
 import "./JsEditor.css"
 
 
