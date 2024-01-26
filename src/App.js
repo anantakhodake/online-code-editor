@@ -4,13 +4,18 @@ import HtmlEditor from "./components/HtmlEditor";
 import CssEditor from "./components/CssEditor";
 import JsEditor from "./components/JsEditor";
 import Editor from "./components/Editor";
+import { useState } from "react";
 
 
 function App() {
+  const [htmlCode,setHtmlCode]= useState('')
+  const HandleChange=(newcode)=>{
+    setHtmlCode(newcode);
+  }
   return (
     <>
       <div className="left">
-        <HtmlEditor />
+        <HtmlEditor code={htmlCode} onChange={HandleChange}/>
         <CssEditor/>
         <JsEditor/>
         </div>

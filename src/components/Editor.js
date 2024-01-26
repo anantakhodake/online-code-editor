@@ -12,11 +12,12 @@ function Editor() {
         </label>
         <Iframe
           className="iframe"
+          srcDocs={}
           title="Online Code Editor"
           sandbox="allow-scripts"
           frameBorder="0"
           width="100%"
-          height="400px"
+          height="300px"
         />  
     </div>
   );
