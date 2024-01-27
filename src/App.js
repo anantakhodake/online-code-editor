@@ -6,21 +6,26 @@ import JsEditor from "./components/JsEditor";
 import Editor from "./components/Editor";
 import { useState } from "react";
 
-
 function App() {
-  const [htmlCode,setHtmlCode]= useState('')
-  const HandleChange=(newcode)=>{
-    setHtmlCode(newcode);
-  }
+  const [htmlCode, setHtmlCode] = useState("");
+  const [cssCode, setCSSCode] = useState("");
+  const [jsCode, setJsCode] = useState("");
+
   return (
     <>
       <div className="left">
-        <HtmlEditor code={htmlCode} onChange={HandleChange}/>
-        <CssEditor/>
-        <JsEditor/>
-        </div>
+        <HtmlEditor
+          code={htmlCode}
+          onChange={(e) => setHtmlCode(e)}
+        />
+        <CssEditor
+          code={cssCode}
+          onChange={(e) => setCSSCode(e)}
+        />
+        <JsEditor code={jsCode} onChange={(e) => setJsCode(e)} />
+      </div>
       <div className="right">
-        <Editor />
+        <Editor codeToRender={`<style>${cssCode}</style> <body>${htmlCode}</body> <script>${jsCode}</script>`} />
       </div>
     </>
   );

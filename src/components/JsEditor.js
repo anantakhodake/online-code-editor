@@ -4,7 +4,7 @@ import { faHtml5 } from "@fortawesome/free-brands-svg-icons";
 import { useState, useEffect } from "react";
 import "./JsEditor.css"
 import { Editor } from "@monaco-editor/react";
-function JsEditor() {
+function JsEditor({code,onChange}) {
   return (
     <div className="js-container">
       <label className="js-label">
@@ -15,8 +15,9 @@ function JsEditor() {
           height="400px"
           width="100%"
           defaultLanguage="javascript"
-          defaultValue="type your code here"
+          value={code}
           theme="vs-dark"
+          onChange={onChange}
         />
     </div>
   );

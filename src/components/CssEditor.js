@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCss3, } from "@fortawesome/free-brands-svg-icons";
 import "./CssEditor.css"
 import { Editor } from "@monaco-editor/react";
-function CssEditor() {
+function CssEditor({code, onChange}) {
   return (
     <div className="css-container">
       <label className="css-label">
@@ -14,8 +14,9 @@ function CssEditor() {
           height="400px"
           width="100%"
           defaultLanguage="css"
-          defaultValue="type your code here"
+          value={code}
           theme="vs-dark"
+          onChange={onChange}
         />
     </div>
   );
