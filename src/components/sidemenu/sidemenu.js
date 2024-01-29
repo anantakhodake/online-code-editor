@@ -1,12 +1,19 @@
-import React from 'react'
+import styled from "@emotion/styled";
+import { Box } from "@mui/material";
+import React from "react";
 
-function Sidemenu() {
+function sidemenu() {
+  const Menucontainer = styled(Box)`
+    border: 2px solid red;
+    height: 100vh;
+    width: 200px;
+  `;
   return (
-    <div>
-      sidemenu
-
-    </div>
-  )
+    <>
+      <Menucontainer>
+      </Menucontainer>
+    </>
+  );
 }
 
-export default Sidemenu
+export default sidemenu;
